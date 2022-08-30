@@ -1,0 +1,25 @@
+--Create a store database
+/**Lily's Store:
+Shirt $5
+Skirt $7
+Sweater $10
+Shorts $8
+Socks $3
+Shoes $15
+Underwear $3
+Hats $5**/
+
+CREATE TABLE lilystore (id INTEGER PRIMARY KEY, name TEXT, price INTEGER);
+INSERT INTO lilystore 
+VALUES (1, "Shirt", 5),
+       (2, "Skirt", 7),
+       (3, "Sweater", 10),
+       (4, "Shorts", 8),
+       (6, "Shoes", 15),
+       (7, "Underwear", 3),
+       (8, "Hats", 5);
+SELECT * FROM lilystore;
+--display the database ordered by price
+SELECT * FROM lilystore ORDER BY price;
+--display the database sum of all prices
+SELECT SUM (price) FROM lilystore
